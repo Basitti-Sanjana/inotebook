@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+# NoteHaven
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NoteHaven is a notebook application that allows users to create, save, and manage their personal notes effortlessly. Each user gets a dedicated personal space to securely store their notes, which can be easily retrieved whenever needed. With its intuitive interface, organizing and accessing notes has never been more convenient.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **User Authentication**: Secure login and registration for personalized note management.
+- **Personalized Notes**: Each user has a dedicated space for their notes.
+- **CRUD Operations**: Create, read, update, and delete notes easily.
+- **Responsive Design**: Access your notes seamlessly on different devices.
 
-### `npm start`
+## Screenshots
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Login
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/NoteBookLogin.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Add Note
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/AddNote.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Update Note
+![image alt](https://github.com/Basitti-Sanjana/inotebook/blob/367444f586a1c97751f9d65d8a48c87f1a8102c3/UpdateNotes.png)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Frontend**: React.js
+- **Backend**: Node.js with Express.js
+- **Database**: MongoDB
+- **Authentication**: JSON Web Tokens (JWT)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Installation and Setup
 
-### `npm run eject`
+Follow these steps to set up the project on your local machine:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Ensure you have the following installed:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Node.js](https://nodejs.org/) (v16 or higher recommended)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+- A package manager (npm or yarn)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Steps
 
-## Learn More
+1. **Clone the repository**:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   git clone https://github.com/Basitti-Sanjana/NoteHaven.git
+   cd NoteHaven
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+2. **Install dependencies**:
 
-### Code Splitting
+   Navigate to the root directory and install backend dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```bash
+   npm install
+   ```
 
-### Analyzing the Bundle Size
+   Then navigate to the `client` folder and install frontend dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   cd client
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Set up environment variables**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   Create a `.env` file in the root directory and add the following variables:
 
-### Advanced Configuration
+   ```env
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_jwt_secret
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+4. **Start the application**:
 
-### Deployment
+   - To start the backend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+     ```bash
+     npm start
+     ```
 
-### `npm run build` fails to minify
+   - To start the frontend:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     ```bash
+     cd client
+     npm start
+     ```
+
+   The app will be accessible at `http://localhost:3000` (frontend) and `http://localhost:5000` (backend).
+
+## How to Use
+
+1. **Sign Up or Log In**:
+   - Navigate to the login page.
+   - Create a new account or log in with your existing credentials.
+
+2. **Create a Note**:
+   - Click the "Add Note" button.
+   - Fill in the note title and content.
+   - Click "Save" to store your note.
+
+3. **View Notes**:
+   - Access all your saved notes from the notebook interface.
+   - Click on a note to view its details.
+
+4. **Edit a Note**:
+   - Click the "Edit" button on any note.
+   - Update the title or content.
+   - Save the changes.
+
+5. **Delete a Note**:
+   - Click the "Delete" button on a note to remove it permanently.
+
+6. **Log Out**:
+   - Click the "Log Out" button to securely end your session.
+
+## Folder Structure
+
+```
+NoteHaven
+├── client          # Frontend code
+│   ├── public      # Static files
+│   └── src         # React components and assets
+├── server          # Backend code
+│   ├── models      # MongoDB models
+│   ├── routes      # Express routes
+│   └── controllers # Logic for route handling
+├── .env.example    # Example environment file
+├── package.json    # Backend dependencies
+└── README.md       # Project documentation
+```
+
+
+
+
+
